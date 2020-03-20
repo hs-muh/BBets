@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Introduction
+# Introduction  
 
 The question is how much money is won/lost on a bet that at least two people have the same b'day in a class of 35.  Instructor wagers 2:1 
 
