@@ -1,6 +1,6 @@
 ---
 title: "BBets Project"
-author: "Dr. J"
+author: "Harun M"
 date: "1/31/2020"
 output: html_document
 ---
@@ -50,4 +50,47 @@ print('average amt:')
 print(mean(saveArray))
 ```
 
+## question 2
+```{r}
+
+saveArray=vector('numeric')
+for(k in 1:1000){
+  bank = 0
+  for(i in 1:525){
+    sampleClass = sample(days, 35, replace = TRUE)
+
+    repeats = length(unique(sampleClass))
+    if (repeats == 35) bank = bank - 4.50
+    else bank = bank + 1
+  }
+saveArray[k]= bank
+
+}
+
+print(paste('average return: ', mean(saveArray)))
+
+```
+answer to question 2:  about $4.50
+
+## question 3   how many students to brake even at 2:1 payoff
+ 
+```{r}
+
+nStudents=29
+ saveArray=vector('numeric')
+for(k in 1:1000){
+  bank = 0
+  for(i in 1:525){
+    sampleClass = sample(days, nStudents, replace = TRUE)
+
+    repeats = length(unique(sampleClass))
+    if (repeats == nStudents) bank = bank - 2
+    else bank = bank + 1
+  }
+saveArray[k]= bank
+}
+
+ print(paste('average return: ',mean(saveArray)))
+```
+ The number of students for break-even at 2:1 is 29
   
